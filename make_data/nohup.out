@@ -1,0 +1,31 @@
+=> loading model from /home/yaboliu/work/frameworks/hrnet/models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
+>>>>> Processing clip 12_006
+Traceback (most recent call last):
+  File "make_tracked_pose_frommot.py", line 540, in <module>
+    main()
+  File "make_tracked_pose_frommot.py", line 438, in main
+    pose_result = detector.pose(img_np, bboxes) # bbox score keypoints 39
+  File "make_tracked_pose_frommot.py", line 297, in pose
+    pose_preds = get_pose_estimation_prediction(self.pose_model, image_pose, center, scale)
+  File "make_tracked_pose_frommot.py", line 174, in get_pose_estimation_prediction
+    output = pose_model(model_input)
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/parallel/data_parallel.py", line 152, in forward
+    for t in chain(self.module.parameters(), self.module.buffers()):
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1520, in parameters
+    for name, param in self.named_parameters(recurse=recurse):
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1546, in named_parameters
+    for elem in gen:
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1490, in _named_members
+    for module_prefix, module in modules:
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1695, in named_modules
+    for m in module.named_modules(memo, submodule_prefix, remove_duplicate):
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1695, in named_modules
+    for m in module.named_modules(memo, submodule_prefix, remove_duplicate):
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1695, in named_modules
+    for m in module.named_modules(memo, submodule_prefix, remove_duplicate):
+  [Previous line repeated 1 more time]
+  File "/home/yaboliu/anaconda3/envs/pose/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1691, in named_modules
+    for name, module in self._modules.items():
+KeyboardInterrupt
